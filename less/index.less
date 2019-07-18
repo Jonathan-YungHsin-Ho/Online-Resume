@@ -1,10 +1,15 @@
 // Is this working?
 // Variables
-@main-font: "Roboto Condensed", sans-serif;
-@header-font: "Roboto", sans-serif;
-@title-font: "Sonsie One", cursive;
-@main-color: #172b4a;
-@secondary-color: #e5e8ed;
+// @main-font: "Roboto Condensed", sans-serif;
+// @header-font: "Roboto", sans-serif;
+// @title-font: "Sonsie One", cursive;
+@main-font: "Questrial", sans-serif;
+@header-font: "Questrial", sans-serif;
+@title-font: "Questrial", sans-serif;
+
+@main-color: #282828;
+@secondary-color: #f0f0f0;
+@max-width: 980px;
 
 // Mixins
 .headings() {
@@ -176,7 +181,7 @@ html {
 
 body {
   line-height: 1.5;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: @main-font;
 }
 
@@ -185,15 +190,25 @@ p {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.4rem;
   .headings();
 
-  font-family: @title-font;
+  font-family: @header-font;
+  text-transform: uppercase;
+
+  @media (max-width: 460px) {
+    font-size: 2.4rem;
+    text-align: center;
+  }
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.3rem;
   .headings();
+
+  @media (max-width: 460px) {
+    font-size: 2rem;
+  }
 }
 
 section,
@@ -247,23 +262,27 @@ nav {
 // Header Styles
 header {
   background-color: @secondary-color;
-  width: 98%;
+  width: @max-width;
   margin: 0 auto;
-  margin-top: 6%;
+  margin-top: 5%;
   padding: 2%;
   .column();
 
   @media (max-width: 500px) {
     margin-top: 10%;
-    width: 92%;
+    // width: 92%;
   }
+
+  // @media (max-width: 1000px) {
+  //   width: 98%;
+  // }
 
   div {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
-	width: 100%;
-	margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 1%;
 
     @media (max-width: 900px) {
@@ -278,13 +297,15 @@ header {
     }
 
     .header-txt {
-	  width: 50%;
-	  margin: 0 auto;
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: 1%;
       .column();
 
       @media (max-width: 900px) {
-		width: 100%;
-		align-items: center;
+        width: 100%;
+        margin-bottom: 3%;
+        align-items: center;
       }
     }
   }
@@ -294,23 +315,33 @@ header {
     padding-top: 1%;
     .column();
 
-	@media (max-width: 900px) {
-		align-items: center;
-	}
+    @media (max-width: 900px) {
+      align-items: center;
+      padding-top: 3%;
+    }
 
     p {
       margin: 1% 0;
     }
 
-    strong {
-      font-weight: bold;
-    }
+    .contact-options {
+      display: flex;
+      justify-content: flex-start;
 
-    a {
-      color: @main-color;
+      @media (max-width: 900px) {
+        display: inline-block;
+        text-align: center;
+        margin-top: 3%;
+      }
 
-      &:hover {
-        opacity: 0.7;
+      a {
+        color: @main-color;
+        padding: 0 2%;
+        font-weight: bold;
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -320,19 +351,19 @@ header {
 main {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: @max-width;
   margin: 0 auto;
 
   @media (max-width: 500px) {
-    width: 92%;
+    // width: 92%;
     flex-direction: column;
     align-items: center;
   }
 
   .about,
   .skills {
-	width: 50%;
-	margin: 0 auto;
+    width: 50%;
+    margin: 0 auto;
 
     @media (max-width: 500px) {
       width: 100%;

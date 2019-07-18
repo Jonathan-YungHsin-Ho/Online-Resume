@@ -142,36 +142,47 @@ html {
 }
 body {
   line-height: 1.5;
-  font-size: 2rem;
-  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.8rem;
+  font-family: "Questrial", sans-serif;
 }
 p {
   max-width: 65ch;
 }
 h1 {
-  font-size: 4rem;
-  font-family: "Roboto", sans-serif;
-  color: #172b4a;
+  font-size: 3.4rem;
+  color: #282828;
   font-weight: bold;
   margin-bottom: 1%;
-  font-family: "Sonsie One", cursive;
+  font-family: "Questrial", sans-serif;
+  text-transform: uppercase;
+}
+@media (max-width: 460px) {
+  h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
 }
 h2 {
-  font-size: 3rem;
-  font-family: "Roboto", sans-serif;
-  color: #172b4a;
+  font-size: 2.3rem;
+  font-family: "Questrial", sans-serif;
+  color: #282828;
   font-weight: bold;
   margin-bottom: 1%;
+}
+@media (max-width: 460px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
 section,
 footer {
   padding: 3%;
 }
 button {
-  background-color: #172b4a;
+  background-color: #282828;
   border: none;
   color: white;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Questrial", sans-serif;
   font-size: 2.5rem;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
@@ -187,7 +198,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: #172b4a;
+  background-color: #282828;
 }
 @media (max-width: 500px) {
   nav {
@@ -204,13 +215,13 @@ nav a {
   }
 }
 nav a:hover {
-  color: #e5e8ed;
+  color: #f0f0f0;
 }
 header {
-  background-color: #e5e8ed;
-  width: 98%;
+  background-color: #f0f0f0;
+  width: 980px;
   margin: 0 auto;
-  margin-top: 6%;
+  margin-top: 5%;
   padding: 2%;
   display: flex;
   flex-direction: column;
@@ -219,7 +230,6 @@ header {
 @media (max-width: 500px) {
   header {
     margin-top: 10%;
-    width: 92%;
   }
 }
 header div {
@@ -244,6 +254,7 @@ header div img {
 header div .header-txt {
   width: 50%;
   margin: 0 auto;
+  margin-bottom: 1%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -251,11 +262,12 @@ header div .header-txt {
 @media (max-width: 900px) {
   header div .header-txt {
     width: 100%;
+    margin-bottom: 3%;
     align-items: center;
   }
 }
 header .contact {
-  border-top: 2px solid #172b4a;
+  border-top: 2px solid #282828;
   padding-top: 1%;
   display: flex;
   flex-direction: column;
@@ -264,29 +276,39 @@ header .contact {
 @media (max-width: 900px) {
   header .contact {
     align-items: center;
+    padding-top: 3%;
   }
 }
 header .contact p {
   margin: 1% 0;
 }
-header .contact strong {
+header .contact .contact-options {
+  display: flex;
+  justify-content: flex-start;
+}
+@media (max-width: 900px) {
+  header .contact .contact-options {
+    display: inline-block;
+    text-align: center;
+    margin-top: 3%;
+  }
+}
+header .contact .contact-options a {
+  color: #282828;
+  padding: 0 2%;
   font-weight: bold;
 }
-header .contact a {
-  color: #172b4a;
-}
-header .contact a:hover {
+header .contact .contact-options a:hover {
   opacity: 0.7;
 }
 main {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 980px;
   margin: 0 auto;
 }
 @media (max-width: 500px) {
   main {
-    width: 92%;
     flex-direction: column;
     align-items: center;
   }
@@ -313,10 +335,10 @@ main .work table {
   width: 98%;
 }
 main .work table tr:nth-child(odd) {
-  background-color: #e5e8ed;
+  background-color: #f0f0f0;
 }
 main .work table th {
-  background-color: #172b4a;
+  background-color: #282828;
   color: white;
   text-align: left;
   padding: 0 1%;
@@ -325,7 +347,7 @@ main .work table td {
   padding: 0 1%;
 }
 footer {
-  background-color: #172b4a;
+  background-color: #282828;
   color: white;
   display: flex;
   justify-content: center;
