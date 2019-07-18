@@ -208,9 +208,9 @@ nav a:hover {
 }
 header {
   background-color: #e5e8ed;
-  width: 98%;
+  width: 980px;
   margin: 0 auto;
-  margin-top: 6%;
+  margin-top: 5%;
   padding: 2%;
   display: flex;
   flex-direction: column;
@@ -219,7 +219,6 @@ header {
 @media (max-width: 500px) {
   header {
     margin-top: 10%;
-    width: 92%;
   }
 }
 header div {
@@ -244,6 +243,7 @@ header div img {
 header div .header-txt {
   width: 50%;
   margin: 0 auto;
+  margin-bottom: 1%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -251,6 +251,7 @@ header div .header-txt {
 @media (max-width: 900px) {
   header div .header-txt {
     width: 100%;
+    margin-bottom: 3%;
     align-items: center;
   }
 }
@@ -264,6 +265,7 @@ header .contact {
 @media (max-width: 900px) {
   header .contact {
     align-items: center;
+    padding-top: 3%;
   }
 }
 header .contact p {
@@ -277,6 +279,7 @@ header .contact .contact-options {
   header .contact .contact-options {
     display: inline-block;
     text-align: center;
+    margin-top: 3%;
   }
 }
 header .contact .contact-options a {
@@ -290,12 +293,11 @@ header .contact .contact-options a:hover {
 main {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 980px;
   margin: 0 auto;
 }
 @media (max-width: 500px) {
   main {
-    width: 92%;
     flex-direction: column;
     align-items: center;
   }

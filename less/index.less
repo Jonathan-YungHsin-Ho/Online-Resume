@@ -5,6 +5,7 @@
 @title-font: "Sonsie One", cursive;
 @main-color: #172b4a;
 @secondary-color: #e5e8ed;
+@max-width: 980px;
 
 // Mixins
 .headings() {
@@ -247,16 +248,20 @@ nav {
 // Header Styles
 header {
   background-color: @secondary-color;
-  width: 98%;
+  width: @max-width;
   margin: 0 auto;
-  margin-top: 6%;
+  margin-top: 5%;
   padding: 2%;
   .column();
 
   @media (max-width: 500px) {
     margin-top: 10%;
-    width: 92%;
+    // width: 92%;
   }
+
+  // @media (max-width: 1000px) {
+  //   width: 98%;
+  // }
 
   div {
     display: flex;
@@ -280,10 +285,12 @@ header {
     .header-txt {
       width: 50%;
       margin: 0 auto;
+      margin-bottom: 1%;
       .column();
 
       @media (max-width: 900px) {
         width: 100%;
+        margin-bottom: 3%;
         align-items: center;
       }
     }
@@ -296,6 +303,7 @@ header {
 
     @media (max-width: 900px) {
       align-items: center;
+      padding-top: 3%;
     }
 
     p {
@@ -309,6 +317,7 @@ header {
       @media (max-width: 900px) {
         display: inline-block;
         text-align: center;
+        margin-top: 3%;
       }
 
       a {
@@ -328,11 +337,11 @@ header {
 main {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: @max-width;
   margin: 0 auto;
 
   @media (max-width: 500px) {
-    width: 92%;
+    // width: 92%;
     flex-direction: column;
     align-items: center;
   }
