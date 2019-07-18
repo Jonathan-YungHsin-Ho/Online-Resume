@@ -1,59 +1,377 @@
 // Is this working?
+// Variables
+@main-font: "Roboto Condensed", sans-serif;
+@header-font: "Roboto", sans-serif;
+@title-font: "Sonsie One", cursive;
+@main-color: #172b4a;
+@secondary-color: #e5e8ed;
+
+// Mixins
+.headings() {
+  font-family: @header-font;
+  color: @main-color;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column() {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-html, body {
-    height: 100%;
+// General Styles
+html,
+body {
+  height: 100%;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 2rem;
+  font-family: @main-font;
+}
+
+p {
+  max-width: 65ch;
+}
+
+h1 {
+  font-size: 4rem;
+  .headings();
+
+  font-family: @title-font;
+}
+
+h2 {
+  font-size: 3rem;
+  .headings();
+}
+
+section,
+footer {
+  padding: 3%;
+}
+
+button {
+  background-color: @main-color;
+  border: none;
+  color: white;
+  font-family: @main-font;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+// Nav Styles
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: @main-color;
+
+  @media (max-width: 500px) {
+    justify-content: center;
+  }
+
+  a {
+    color: white;
+    padding: 1% 2%;
+
+    @media (max-width: 500px) {
+      padding: 1% 4%;
+    }
+
+    &:hover {
+      color: @secondary-color;
+    }
+  }
+}
+
+// Header Styles
+header {
+  background-color: @secondary-color;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 6%;
+  padding: 2%;
+  .column();
+
+  @media (max-width: 500px) {
+    margin-top: 10%;
+    width: 92%;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+	width: 100%;
+	margin: 0 auto;
+    margin-bottom: 1%;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      width: 35vh;
+      height: 35vh;
+      border-radius: 50%;
+    }
+
+    .header-txt {
+	  width: 50%;
+	  margin: 0 auto;
+      .column();
+
+      @media (max-width: 900px) {
+		width: 100%;
+		align-items: center;
+      }
+    }
+  }
+
+  .contact {
+    border-top: 2px solid @main-color;
+    padding-top: 1%;
+    .column();
+
+	@media (max-width: 900px) {
+		align-items: center;
+	}
+
+    p {
+      margin: 1% 0;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    a {
+      color: @main-color;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// Main Styles
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    width: 92%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about,
+  .skills {
+	width: 50%;
+	margin: 0 auto;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+
+  .skills {
+    ol {
+      list-style-type: square;
+      list-style-position: inside;
+    }
+  }
+
+  .work {
+    flex: 1;
+
+    table {
+      width: 98%;
+
+      tr:nth-child(odd) {
+        background-color: @secondary-color;
+      }
+
+      th {
+        background-color: @main-color;
+        color: white;
+        text-align: left;
+        padding: 0 1%;
+      }
+
+      td {
+        padding: 0 1%;
+      }
+    }
+  }
+}
+// Footer Styles
+footer {
+  background-color: @main-color;
+  color: white;
+  .center();
+}

@@ -1,19 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sonsie+One|Roboto|Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-  <title>My Resume</title>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a
+          href="https://jonathan-yunghsin-ho.github.io/portfolio-website/"
+          target="_blank"
+          >Portfolio</a
+        >
+        <a href="#">Contact</a>
+      </nav>
+      <header>
+        <div>
+          <img src="images/Portrait.jpg" alt="Head shot of Jonathan Ho" />
+          <div class="header-txt">
+            <h1>Jonathan Y. Ho</h1>
+            <h2>Full Stack Web Developer</h2>
+            <p>
+              Creative and innovative. Dedicated and detail-oriented. Committed to personal and professional development. Seeking a
+              position with a team that will support my growth and development at the onset of my career.
+            </p>
+          </div>
+        </div>
+        <div class="contact">
+          <p>
+            I'm constantly looking to learn, grow, and challenge myself as a web
+            developer. If you're interested in my services or in collaborating
+            on a project, please contact me.
+          </p>
+          <div>
+            <div>
+              <strong
+                ><a href="mailto:jonathan-yunghsin-ho@gmail.com"
+                  >Email</a
+                ></strong
+              >
+            </div>
+            <div>
+              <strong><a href="tel:734-377-7063">Mobile</a></strong>
+            </div>
+            <div>
+              <strong><a href="#">GitHub</a></strong>
+            </div>
+            <div>
+              <strong><a href="">LinkedIn</a></strong>
+            </div>
+          </div>
+          <!-- <button>Contact Me</button> -->
+        </div>
+      </header>
+      <main>
+        <section class="about">
+          <h2>About Me</h2>
+          <p>
+            I'm a Full Stack Web Developer based out of Brooklyn, NY. In
+            addition to my technical proficiencies, I bring strong
+            communication, teamwork, and organization skills honed from over a
+            decade's worth of experience as a classroom educator.
+          </p>
+        </section>
 
-  <link rel="stylesheet" href="css/index.css">
+        <section class="skills">
+          <h2>Technical Skillset</h2>
+          <ol>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+          </ol>
+        </section>
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-  <h1>My Resume</h1>
-</body>
+        <section class="work">
+          <h2>Work History</h2>
+          <table>
+            <tr>
+              <th>Years</th>
+              <th>Organization</th>
+              <th>Title</th>
+            </tr>
+            <tr>
+              <td>2008-2019</td>
+              <td>Brooklyn Free School</td>
+              <td>Advisor, Head Teacher, Education Coordinator</td>
+            </tr>
+            <tr>
+              <td>2007-2010</td>
+              <td>Wicked Sovereign Web Design</td>
+              <td>Flash Web Designer and ActionScript Programmer</td>
+            </tr>
+            <tr>
+              <td>2005-2007</td>
+              <td>The School for Human Rights</td>
+              <td>High School Teacher</td>
+            </tr>
+          </table>
+        </section>
+      </main>
+      <footer>
+        <div>Copyright Jonathan Ho 2019</div>
+      </footer>
+    </div>
+  </body>
 </html>
