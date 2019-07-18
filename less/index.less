@@ -262,8 +262,8 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
-	width: 100%;
-	margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 1%;
 
     @media (max-width: 900px) {
@@ -278,13 +278,13 @@ header {
     }
 
     .header-txt {
-	  width: 50%;
-	  margin: 0 auto;
+      width: 50%;
+      margin: 0 auto;
       .column();
 
       @media (max-width: 900px) {
-		width: 100%;
-		align-items: center;
+        width: 100%;
+        align-items: center;
       }
     }
   }
@@ -294,23 +294,31 @@ header {
     padding-top: 1%;
     .column();
 
-	@media (max-width: 900px) {
-		align-items: center;
-	}
+    @media (max-width: 900px) {
+      align-items: center;
+    }
 
     p {
       margin: 1% 0;
     }
 
-    strong {
-      font-weight: bold;
-    }
+    .contact-options {
+      display: flex;
+      justify-content: flex-start;
 
-    a {
-      color: @main-color;
+      @media (max-width: 900px) {
+        display: inline-block;
+        text-align: center;
+      }
 
-      &:hover {
-        opacity: 0.7;
+      a {
+        color: @main-color;
+        padding: 0 2%;
+        font-weight: bold;
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -331,8 +339,8 @@ main {
 
   .about,
   .skills {
-	width: 50%;
-	margin: 0 auto;
+    width: 50%;
+    margin: 0 auto;
 
     @media (max-width: 500px) {
       width: 100%;

@@ -269,13 +269,22 @@ header .contact {
 header .contact p {
   margin: 1% 0;
 }
-header .contact strong {
+header .contact .contact-options {
+  display: flex;
+  justify-content: flex-start;
+}
+@media (max-width: 900px) {
+  header .contact .contact-options {
+    display: inline-block;
+    text-align: center;
+  }
+}
+header .contact .contact-options a {
+  color: #172b4a;
+  padding: 0 2%;
   font-weight: bold;
 }
-header .contact a {
-  color: #172b4a;
-}
-header .contact a:hover {
+header .contact .contact-options a:hover {
   opacity: 0.7;
 }
 main {
