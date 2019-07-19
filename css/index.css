@@ -295,11 +295,16 @@ header .contact .contact-options {
 }
 header .contact .contact-options a {
   color: #282828;
-  padding: 0 2%;
+  padding: 0 4%;
   font-weight: bold;
 }
 header .contact .contact-options a:hover {
   opacity: 0.7;
+}
+@media (max-width: 500px) {
+  header .contact .contact-options a {
+    padding: 0 8%;
+  }
 }
 main {
   display: flex;
