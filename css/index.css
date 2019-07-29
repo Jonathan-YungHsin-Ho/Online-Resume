@@ -199,6 +199,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   background-color: #282828;
+  opacity: 0.97;
 }
 @media (max-width: 500px) {
   nav {
