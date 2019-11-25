@@ -3,9 +3,9 @@
 // @main-font: "Roboto Condensed", sans-serif;
 // @header-font: "Roboto", sans-serif;
 // @title-font: "Sonsie One", cursive;
-@main-font: "Questrial", sans-serif;
-@header-font: "Questrial", sans-serif;
-@title-font: "Questrial", sans-serif;
+@main-font: 'Questrial', sans-serif;
+@header-font: 'Questrial', sans-serif;
+@title-font: 'Questrial', sans-serif;
 
 @main-color: #282828;
 @secondary-color: #f0f0f0;
@@ -13,22 +13,22 @@
 
 // Mixins
 .headings() {
-  font-family: @header-font;
-  color: @main-color;
-  font-weight: bold;
-  margin-bottom: 1%;
+	font-family: @header-font;
+	color: @main-color;
+	font-weight: bold;
+	margin-bottom: 1%;
 }
 
 .center() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .column() {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -117,12 +117,12 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -136,278 +136,283 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+	display: block;
 }
 body {
-  line-height: 1;
+	line-height: 1;
 }
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+	content: '';
+	content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  max-width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	max-width: 100%;
 }
 
 // General Styles
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-  line-height: 1.5;
-  font-size: 1.8rem;
-  font-family: @main-font;
+	line-height: 1.5;
+	font-size: 1.8rem;
+	font-family: @main-font;
 }
 
 p {
-  max-width: 65ch;
+	max-width: 65ch;
 }
 
 h1 {
-  font-size: 3.4rem;
-  .headings();
+	font-size: 3.4rem;
+	.headings();
 
-  font-family: @header-font;
-  text-transform: uppercase;
+	font-family: @header-font;
+	text-transform: uppercase;
 
-  @media (max-width: 460px) {
-    font-size: 2.4rem;
-    text-align: center;
-  }
+	@media (max-width: 460px) {
+		font-size: 2.4rem;
+		text-align: center;
+	}
 }
 
 h2 {
-  font-size: 2.3rem;
-  .headings();
+	font-size: 2.3rem;
+	.headings();
 
-  @media (max-width: 460px) {
-    font-size: 2rem;
-  }
+	@media (max-width: 460px) {
+		font-size: 2rem;
+	}
 }
 
 section,
 footer {
-  padding: 3%;
+	padding: 3%;
 }
 
 button {
-  background-color: @main-color;
-  border: none;
-  color: white;
-  font-family: @main-font;
-  font-size: 2.5rem;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
+	background-color: @main-color;
+	border: none;
+	color: white;
+	font-family: @main-font;
+	font-size: 2.5rem;
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 }
 
 // Nav Styles
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  background-color: @main-color;
-  opacity: 0.97;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	background-color: @main-color;
+	opacity: 0.97;
 
-  @media (max-width: 500px) {
-    justify-content: center;
-  }
+	@media (max-width: 500px) {
+		justify-content: center;
+	}
 
-  a {
-    color: white;
-    padding: 1% 2%;
+	a {
+		color: white;
+		padding: 1% 2%;
 
-    @media (max-width: 500px) {
-      padding: 1% 4%;
-    }
+		@media (max-width: 500px) {
+			padding: 1% 4%;
+		}
 
-    &:hover {
-      color: @secondary-color;
-    }
-  }
+		&:hover {
+			color: @secondary-color;
+		}
+	}
 }
 
 // Header Styles
 header {
-  background-color: @secondary-color;
-  width: @max-width;
-  margin: 0 auto;
-  margin-top: 5%;
-  padding: 2%;
-  .column();
+	background-color: @secondary-color;
+	width: @max-width;
+	margin: 0 auto;
+	margin-top: 5%;
+	padding: 2%;
+	.column();
 
-  @media (max-width: 500px) {
-    margin-top: 10%;
-    // width: 92%;
-  }
+	@media (max-width: 500px) {
+		margin-top: 10%;
+		// width: 92%;
+	}
 
-  // @media (max-width: 1000px) {
-  //   width: 98%;
-  // }
+	// @media (max-width: 1000px) {
+	//   width: 98%;
+	// }
 
-  div {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 1%;
+	div {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: flex-end;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 1%;
 
-    @media (max-width: 900px) {
-      flex-direction: column;
-      align-items: center;
-    }
+		@media (max-width: 900px) {
+			flex-direction: column;
+			align-items: center;
+		}
 
-    img {
-      width: 35vh;
-      height: 35vh;
-      border-radius: 50%;
-    }
+		img {
+			width: 35vh;
+			height: 35vh;
+			border-radius: 50%;
+		}
 
-    .header-txt {
-      width: 50%;
-      margin: 0 auto;
-      margin-bottom: 1%;
-      .column();
+		.header-txt {
+			width: 50%;
+			margin: 0 auto;
+			margin-bottom: 1%;
+			.column();
 
-      @media (max-width: 900px) {
-        width: 100%;
-        margin-bottom: 3%;
-        align-items: center;
-      }
-    }
-  }
+			@media (max-width: 900px) {
+				width: 100%;
+				margin-bottom: 3%;
+				align-items: center;
+			}
+		}
+	}
 
-  .contact {
-    border-top: 2px solid @main-color;
-    padding-top: 1%;
-    .column();
+	.contact {
+		border-top: 2px solid @main-color;
+		padding-top: 1%;
+		.column();
 
-    @media (max-width: 900px) {
-      align-items: center;
-      padding-top: 3%;
-    }
+		@media (max-width: 900px) {
+			align-items: center;
+			padding-top: 3%;
+		}
 
-    p {
-      margin: 1% 0;
-    }
+		p {
+			margin: 1% 0;
+		}
 
-    .contact-options {
-      display: flex;
-      justify-content: flex-start;
+		.contact-options {
+			display: flex;
+			justify-content: flex-start;
 
-      @media (max-width: 900px) {
-        display: inline-block;
-        text-align: center;
-        margin-top: 3%;
-      }
+			@media (max-width: 900px) {
+				display: inline-block;
+				text-align: center;
+				margin-top: 3%;
+			}
 
-      a {
-        color: @main-color;
-        padding: 0 4%;
-        font-weight: bold;
+			a {
+				color: @main-color;
+				padding: 0 4%;
+				font-weight: bold;
 
-        &:hover {
-          opacity: 0.7;
-        }
+				&:hover {
+					opacity: 0.7;
+				}
 
-        @media (max-width: 500px) {
-          padding: 0 8%;
-        }
-      }
-    }
-  }
+				@media (max-width: 500px) {
+					padding: 0 8%;
+				}
+			}
+		}
+	}
 }
 
 // Main Styles
 main {
-  display: flex;
-  flex-wrap: wrap;
-  width: @max-width;
-  margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: @max-width;
+	margin: 0 auto;
 
-  @media (max-width: 500px) {
-    // width: 92%;
-    flex-direction: column;
-    align-items: center;
-  }
+	@media (max-width: 500px) {
+		// width: 92%;
+		flex-direction: column;
+		align-items: center;
+	}
 
-  .about,
-  .skills {
-    width: 50%;
-    margin: 0 auto;
+	.about,
+	.skills {
+		width: 50%;
+		margin: 0 auto;
 
-    @media (max-width: 500px) {
-      width: 100%;
-    }
-  }
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+	}
 
-  .skills {
-    ol {
-      list-style-type: square;
-      list-style-position: inside;
-    }
-  }
+	.skills {
+		ol {
+			list-style-type: square;
+			list-style-position: inside;
+			ul {
+				list-style-type: circle;
+				list-style-position: inside;
+				padding-left: 2.6rem;
+			}
+		}
+	}
 
-  .work {
-    flex: 1;
+	.work {
+		flex: 1;
 
-    table {
-      width: 98%;
+		table {
+			width: 98%;
 
-      tr:nth-child(odd) {
-        background-color: @secondary-color;
-      }
+			tr:nth-child(odd) {
+				background-color: @secondary-color;
+			}
 
-      th {
-        background-color: @main-color;
-        color: white;
-        text-align: left;
-        padding: 0 1%;
-      }
+			th {
+				background-color: @main-color;
+				color: white;
+				text-align: left;
+				padding: 0 1%;
+			}
 
-      td {
-        padding: 0 1%;
-      }
-    }
-  }
+			td {
+				padding: 0 1%;
+			}
+		}
+	}
 }
 // Footer Styles
 footer {
-  background-color: @main-color;
-  color: white;
-  .center();
+	background-color: @main-color;
+	color: white;
+	.center();
 }

@@ -1,0 +1,23 @@
+{
+  "name": "online-resume",
+  "version": "1.0.0",
+  "description": "For this project you will be building a digital resume from scratch. You will be required to use specific preprocessing skills to accomplish your tasks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathan-YungHsin-Ho/Online-Resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonathan-YungHsin-Ho/Online-Resume/issues"
+  },
+  "homepage": "https://github.com/Jonathan-YungHsin-Ho/Online-Resume#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3"
+  }
+}
